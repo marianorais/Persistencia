@@ -1,0 +1,4 @@
+Producto: Clase pesistente,
+ - Realizo un Joined Table, ya que considero la mejor opcion por temas de normalizacion. Al utilizar single table,
+ serian muchos campos en null con poca normalizacion y si uso Table_per_class estaria repitiendo los valores de Producto,
+ por cada clase hija

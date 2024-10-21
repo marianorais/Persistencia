@@ -1,0 +1,11 @@
+Jugador: Entidad persistente,
+ - ManyToOne con Personaje ya que muchos jugadores pueden pertenecer a un personaje
+
+Personaje: Entidad persistente,
+ - Hice un Single_Table ya que cada clase hija y la misma clase Personaje tienen pocos atributos por lo que habria
+ pocos nulls y la normalizacion no seria tan grave.
+ - Hago un ElementCollection con ElementoDefensor ya que tengo una lista de strings persistentes (por como se persiste esta clase)
+
+ElementoDefensor: Entidad persistente,
+ - Realizo un converter ya que sus clases hijas no tienen parametros sino que son simples instancias. Por eso,
+  realizo un converter para guardar como un string y despues desConvertirlo a la instrancia correcta

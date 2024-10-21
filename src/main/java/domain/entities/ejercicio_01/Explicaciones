@@ -1,0 +1,23 @@
+Rutina:
+
+ - Hago un ManyToOne de Rutina a Deportista debido a que una misma rutina puede pertenecer a varios deportistas distintos
+ - Hago un OneToMany de Rutina a DiaDeEntrenamiento debido a que una rutina tiene una lista de diaDeEntrenamiento
+ - Hago un ManyToOne de Rutina a RutinaAnterior debido a que una misma rutina puede pertenecer a una lista de rutinas distintas
+
+Ejercicio:
+
+ - Entidad persistente, Nombre y Detalle campos no nulos
+
+DiaDeEntrenamiento:
+
+ - Hago un OneToMany con Ejercicio debido a que un DiaDeEntrenamiento posee una lista de Ejercicios
+ - Hago un OneToOne con DiaDeEntrenamiento debido a que un DiaDeEntrenamiento solo pertenece al DIaDeEntrenamiento siguiente
+
+Deportista:
+
+ - Al tener una lista de string (contactos) elijo la opcion de hacer un ElementCollection para que pueda persistir la lista de fotos
+ - Hago un Converter para la motivacion. Debido a que quiero persistir una interfaz donde sus hijos tampoco tienen campos persistentes.
+
+Motivacion:
+
+ - Entidad persistente, Utilizo un converter ya que no deseo que las implementaciones de la interfaz se persistan sino que solo la interfaz por si sola
